@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+/* SocTrackr Theme Variables */
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #18181b;
+  --card-bg: rgba(39,39,42,0.4);
+  --text-primary: #e4e4e7;
+  --text-secondary: #a1a1aa;
+  --text-tertiary: #71717a;
+  --border-subtle: rgba(82,82,91,0.3);
+  --accent-primary: #42f5b9;
+  --accent-primary-2: #2dd4bf;
+  --accent-secondary: #84cc16;
+  --accent-secondary-2: #65a30d;
+  --accent-purple: #8b5cf6;
+  --accent-purple-2: #7c3aed;
+}
+
+/* Global Background & Text Defaults */
+html, body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Glass Card */
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid var(--border-subtle);
+  border-radius: 30px;
+  transition: border-color 250ms ease, box-shadow 250ms ease, transform 250ms ease;
+}
+
+.glass-card:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 0 20px 50px rgba(66, 245, 185, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Alternate hover accents */
+.hover-accent-lime:hover {
+  border-color: var(--accent-secondary);
+  box-shadow: 0 20px 50px rgba(132, 204, 22, 0.3);
+}
+
+.hover-accent-purple:hover {
+  border-color: var(--accent-purple);
+  box-shadow: 0 20px 50px rgba(139, 92, 246, 0.3);
+}
+
+/* Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary-2) 100%);
+  color: var(--bg-primary);
+  box-shadow: 0 10px 30px rgba(66, 245, 185, 0.4);
+  transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
+}
+.btn-primary:hover {
+  box-shadow: 0 15px 40px rgba(66, 245, 185, 0.6);
+  transform: translateY(-3px);
+  filter: brightness(1.05);
+}
+
+.btn-secondary {
+  background: rgba(39,39,42,0.8);
+  color: var(--accent-primary);
+  border: 3px solid var(--accent-primary);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background 200ms ease, color 200ms ease, transform 200ms ease;
+}
+.btn-secondary:hover {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  transform: translateY(-2px);
+}
+
+/* Heading Gradient */
+.heading-gradient {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Icon gradient badges */
+.icon-badge-primary {
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-primary-2) 100%);
+  box-shadow: 0 10px 30px rgba(66, 245, 185, 0.4);
+  color: #0a0a0f;
+}
+.icon-badge-lime {
+  background: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-secondary-2) 100%);
+  box-shadow: 0 10px 30px rgba(132, 204, 22, 0.4);
+  color: #0a0a0f;
+}
+.icon-badge-purple {
+  background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-purple-2) 100%);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+  color: #0a0a0f;
+}
+
+/* Animations */
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up { animation: fade-in-up 500ms ease forwards; opacity: 0; }
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-float { animation: float-slow 6s ease-in-out infinite; }
+
+/* Background overlays */
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(66, 245, 185, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(66, 245, 185, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.15;
+  pointer-events: none;
+}
