@@ -130,3 +130,15 @@ html, body {
   opacity: 0.15;
   pointer-events: none;
 }
+
+/* Animated gradient background (cyan tones) */
+@keyframes gradient-pan-bg {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+.btn-animated-gradient {
+  background: linear-gradient(90deg, #42f5b9 0%, #0aa890 100%);
+  background-size: 200% 200%;
+  animation: gradient-pan-bg 3s ease-in-out infinite alternate;
+  color: #0a0a0f;
+}
