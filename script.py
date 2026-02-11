@@ -208,7 +208,7 @@ def Main():
     # AddSource(cursor, conn, "cusquash", "instagram", oct4Epoch)
     # AddSource(cursor, conn, "studentmindscambridge", "instagram", oct4Epoch)
     # AddSource(cursor, conn, "camunitc", "instagram", oct4Epoch)
-    # AddSource(cursor, conn, "camtravelsoc", "instagram", oct4Epoch)
+    # AddSource(cursor, conn, "camtravelsoc", "instafgram", oct4Epoch)
     # AddSource(cursor, conn, "cutric", "instagram", oct4Epoch)
     # AddSource(cursor, conn, "cambridgevalueinvesting", "instagram", oct4Epoch)
     # AddSource(cursor, conn, "cuwinesoc", "instagram", oct4Epoch)
